@@ -1,8 +1,8 @@
 {
   "name": "paradise-nursery",
+  "version": "0.1.0",
   "homepage": "https://prince142001.github.io/paradise-nursery-plant-store",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",

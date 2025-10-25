@@ -11,17 +11,22 @@ import CartDetail from "./CartDetail/CartDetail.jsx";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        { path: "", element: <Home /> },
+        { path: "product-page", element: <ProductPage /> },
+        { path: "cart-detail", element: <CartDetail /> },
+      ],
+    },
+  ],
   {
-    path: "/",
-    element: <Layout />,
-    children: [
-      { path: "", element: <Home /> },
-      { path: "product-page", element: <ProductPage /> },
-      { path: "cart-detail", element: <CartDetail /> },
-    ],
-  },
-]);
+    basename: "/paradise-nursery-plant-store",
+  }
+);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
